@@ -28,6 +28,7 @@ body {
     width: 100%;
     min-height: 100vh;
     font-family: 'Lato', sans-serif;
+    position: relative;
 }
 
 a {
@@ -57,6 +58,37 @@ h2 {
 h3 {
     font-size: 3rem;
 }
+
+/* Posicionamiento de los svg */
+
+
+.body__svg1 {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    top: 95vh;
+    width: 11%;
+}
+
+.body__svg2 {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+@media (min-width:768px ){
+    .body__svg1,
+    .body__svg2 {
+        display: block;
+    }
+
+    .body__svg2 {
+        display: block;
+    }
+}
+
 
 .contenedor {
     width: 90%;
@@ -293,6 +325,7 @@ h3 {
 
 @media (min-width:768px ){
     .main__foot {
+        display: none;
         padding: 0;
     }
 }
@@ -343,4 +376,24 @@ h3 {
 
 .main__permises {
     font-size: 1.4rem;
+}
+
+/* Alerta de validaciones */
+.alerta {
+    position: absolute;
+    top: 10%;
+    left:50%;
+    transform: translateX(-50%);
+    padding: 2rem;
+    background-color: rgb(148, 77, 65);
+    color: var(--m-white);
+    transition: all .3s ease;
+    border-radius: 1.2rem;
+}
+
+.correcto{
+    background-color: rgb(70, 151, 88);
+}
+.error {
+    background-color: rgb(179, 105, 92);
 }

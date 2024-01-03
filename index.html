@@ -82,20 +82,23 @@
       <div class="main__formulario">
         <p class="main__text"> <span>Simula tu adelanto </span>y conoce la mejor oferta que tenemos para ti.</p>
         <form class="main__formulario">
-          <input id="dni" type="text" placeholder="DNI">
-          <input id="celular" type="tel" placeholder="Celular">
-          <input id="correo" type="text" placeholder="E-mail">
+          <input id="dni" type="text" name="dni" placeholder="DNI" maxlength="8" >
+          <input id="celular" type="tel" name="celular" placeholder="Celular" pattern="9\d{8}" maxlength="9" >
+          <input id="correo" type="email" name="correo" placeholder="E-mail">
           <div class="main__check">
-            <input id="" type="checkbox" checked>
+            <input  id="checkbox" type="checkbox" checked>
             <p class="main__checktext">He leído y acepto la  <a href="">Cláusula de información y consentimiento para tratamiento datos personales.</a> </p>
           </div>
   
-          <input type="submit" value="Simular">
+          <input id="solicitar" type="submit" value="Simular">
         </form>
       </div>
     </div>
     <p class="main__foot">(*) El otorgamiento del producto está sujeto a evaluación. - - Los desembolsos se realizan en días hábiles.</p>
   </main>
+
+  <img class="body__svg1" src="public/svg/Vector.svg" alt="vector">
+  <img class="body__svg2" src="public/svg/Vector2.svg" alt="vector">
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <script src="js/app.js"></script>
