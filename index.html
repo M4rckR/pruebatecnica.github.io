@@ -3,10 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,500,600,700" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link rel="icon" href="./svg/banbif.svg">
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
   <title>Ban Bif</title>
 </head>
 <body>
+  <header class="header">
+    <picture class="contenedor header__logo">
+      <img src="./svg/banbif.svg" alt="logo banbif">
+    </picture>
+    <div class="header__container">
+      <div class="header__text contenedor">
+        <h1 class="header__title">Factoring Independiente</h1>
+        <p class="header__paragraph">Obtén la liquidez inmediata que tu negocio necesita</p>
+      </div>
+    </div>
+    <!-- Use bootstrap para la utilidad de el carrusel -->
+    <div id="carouselExampleIndicators" class="carousel slide deslizador">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="deslizador__flex contendor">
+            <div class="deslizador__circle">
+              <img src="public/svg/check.svg" alt="indiador">
+            </div>
+            <p class="deslizador__paragraph">Aceptamos facturas <span>sin montos</span>  mínimos, hasta un plazo máximo de <span>180 días</span>  calendario.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="deslizador__flex contendor">
+            <div class="deslizador__circle">
+              <img src="public/svg/check.svg" alt="indiador">
+            </div>
+            <p class="deslizador__paragraph"> <span>Desembolsos al 100% </span>del cobro de tus facturas el mismo día (*).</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </header>
+
+
+  <main class="main">
+    <div class="main__contenedor">
+      <div class="main__detalles"></div>
+      <div class="main__formulario contenedor">
+        <p class="main__text"> <span>Simula tu adelanto </span>y conoce la mejor oferta que tenemos para ti.</p>
+        <form class="main__formulario">
+          <input type="text" placeholder="DNI">
+          <input type="tel" placeholder="Celular">
+          <input type="text" placeholder="E-mail">
+          <div class="main__check">
+            <input type="checkbox">
+            <p class="main__checktext">He leído y acepto la  <a href="">Cláusula de información y consentimiento para tratamiento datos personales.</a> </p>
+          </div>
   
+          <input type="submit" value="Simular">
+        </form>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
 </body>
 </html>
