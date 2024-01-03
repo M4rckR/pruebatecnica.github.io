@@ -40,7 +40,7 @@
         e.preventDefault();
         
         if(dni.value === '' || celular.value === '' || correo.value === ''){
-            mostrarAlerta('Todos los campos son obligatorios','error');
+            mostrarAlerta('Rellene todos los campos','error');
             return;
         }
         if(!/^\d{8}$/.test(dni.value)){
@@ -55,9 +55,18 @@
             mostrarAlerta('Correo no válido', 'error');
             return;
         }
+        if(!checkbox.checked){
+            mostrarAlerta('Debe aceptar los términos y condiciones', 'error');
+            return;
+        }
 
         mostrarAlerta('Solicitud enviada correctamente', 'correcto');
-        cambiarContenido();
+
+        // Redireccionar a otra pagina
+        let destino = "result.html";
+        setTimeout(function(){
+            window.location.href = destino;
+        }, 1500);
     }
     });
 
