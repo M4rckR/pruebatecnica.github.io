@@ -48,7 +48,7 @@
             return;
         }
         if(!/^9\d{8}$/.test(celular.value)){
-            mostrarAlerta('El teléfono debe empezar en 9', 'error');
+            mostrarAlerta('Telefono invalido', 'error');
             return;
         }
         if(!/\S+@\S+\.\S+/.test(correo.value)){
