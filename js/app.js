@@ -39,18 +39,26 @@
     function validar(e){
         e.preventDefault();
         
+        // Validar campos vacios
         if(dni.value === '' || celular.value === '' || correo.value === ''){
             mostrarAlerta('Rellene todos los campos','error');
             return;
         }
+
+        // Use expresiones regulares para validar los campos
+        // Validar campos numericos
         if(!/^\d{8}$/.test(dni.value)){
             mostrarAlerta('DNI no válido', 'error');
             return;
         }
+
+        // Validar celular
         if(!/^9\d{8}$/.test(celular.value)){
             mostrarAlerta('Telefono invalido', 'error');
             return;
         }
+
+        // Validar correo
         if(!/\S+@\S+\.\S+/.test(correo.value)){
             mostrarAlerta('Correo no válido', 'error');
             return;
