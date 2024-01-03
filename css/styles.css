@@ -84,6 +84,7 @@ h3 {
 
 .header__container {
     text-align: center;
+
 }
 
 @media (min-width:768px ){
@@ -93,7 +94,8 @@ h3 {
         display: flex;
         align-items: center;
         text-align: left; 
-        padding: 0 12rem;   
+        padding: 0 12rem; 
+        margin-bottom: 4rem;  
     }
 }
 
@@ -139,6 +141,11 @@ h3 {
 }
 
 /* Para el carrusel use bootstrap */
+.carousel-indicators [data-bs-target] {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+  }
 
 .deslizador {
     background: linear-gradient(270deg, #0370F5 15.24%, #20A6FF 71.77%, #20A6FF 111.26%);
@@ -189,9 +196,18 @@ h3 {
 
 /* Parte principal de la web */
 
-.main {
+.main__contenedor{
     padding: 0 2rem;
 }
+
+@media (min-width:768px ){
+    .main__contenedor{
+        padding: 0;
+        display: flex;
+        gap: 6rem;
+    }
+}
+
 
 .main__text {
     color: var(--m-blue);
@@ -208,6 +224,15 @@ h3 {
     display: flex;
     flex-direction: column;
     gap: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+@media (min-width:768px ){
+    .main__formulario {
+        margin: 0;
+        flex: 3;
+    }
+
 }
 
 .main__formulario::placeholder {
@@ -224,6 +249,8 @@ h3 {
     border-radius: 5px;
     font-size: 1.6rem;
     font-weight: 500;
+    margin: 0;
+    outline: none;
     
 }
 
@@ -255,4 +282,65 @@ h3 {
 .main__checktext a {
     display: inline;
     color: var(--m-blue-sky);
+}
+
+
+.main__foot {
+    padding: 0 2rem;
+    font-size: 1.2rem;
+    color: var(--m-blue-light);
+}
+
+@media (min-width:768px ){
+    .main__foot {
+        padding: 0;
+    }
+}
+
+.main__detalles {
+    display: none;
+}
+
+
+@media (min-width:768px ){
+    .main__detalles {
+        display: flex;
+        flex: 5 ;
+    }
+}
+
+.main__picture {
+    flex: 4;
+}
+
+
+.main__info {
+    flex: 8;
+}
+
+.main__permises {
+    color: var(--m-blue-light);
+}
+
+.main__flex {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.main__flex img {
+    padding-top: .8rem;
+}
+
+.main__flex p {
+    font-size: 1.8rem;
+    color: var(--m-blue);
+}
+
+.main__flex p span{
+    font-weight: 700;
+}
+
+.main__permises {
+    font-size: 1.4rem;
 }
