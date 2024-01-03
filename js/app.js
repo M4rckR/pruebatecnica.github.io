@@ -1,12 +1,14 @@
 (function(){
-    // Declaracion de variables
+
+    document.addEventListener('DOMContentLoaded', function(){
+
+            // Declaracion de variables
     const dni = document.getElementById('dni');
     const celular = document.getElementById('celular');
     const correo = document.getElementById('correo');
     const checkbox = document.getElementById('checkbox');
     const solicitar = document.getElementById('solicitar');
-      
-    // Funciones
+            // Funciones
     solicitar.addEventListener('click', validar);
 
     function mostrarAlerta(mensaje, tipo){
@@ -57,6 +59,10 @@
         mostrarAlerta('Solicitud enviada correctamente', 'correcto');
         cambiarContenido();
     }
+    });
+
+      
+
 })();
 
     
